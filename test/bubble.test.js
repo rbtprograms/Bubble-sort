@@ -36,13 +36,13 @@ describe('bubble sorting algorithm', () => {
     it('leaves array alone when it needs no sorting', () => {
         const none = [1, 2, 3, 4, 5, 6];
         const noneSorted = bubbleSorter(none);
-        console.log(noneSorted);
         assert.deepEqual(noneSorted, [1, 2, 3, 4, 5, 6]);
     });
     
     it.only('can sort arrays with large, random numbers', () => {
         const random = [927, 88837, 23, 9090, 91837, 222, 4567, 111111];
         const randomSorted = bubbleSorter(random);
+        console.log(randomSorted);
         assert.deepEqual(randomSorted, [23, 222, 927, 4567, 9090, 88837, 91837, 111111]);
     });
 
