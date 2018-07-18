@@ -22,10 +22,10 @@ describe('bubble sorting algorithm', () => {
     });
     
     it('can put an array of 20 in order', () => {
-        const large = [5, 9, 20, 19, 1, 3, 4, 18, 17, 6, 8, 7, 13, 10, 12, 14, 15, 16];
+        const large = [5, 9, 20, 19, 1, 3, 4, 18, 17, 6, 8, 7, 2, 11, 13, 10, 12, 14, 15, 16];
         const largeSorted = bubbleSorter(large);
         console.log(largeSorted);
         assert.deepEqual(largeSorted, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]);
-    })
+    });
 
 });
