@@ -51,7 +51,13 @@ describe('bubble sorting algorithm', () => {
         assert.deepEqual(negativeSorted, [-20, -8, -4, 1, 3, 6, 12]);
     });
 
-    it('works with words?', () => {
+    it('works with lowercase letters', () => {
+        const letters = ['m', 'j', 'x', 'b'];
+        const lettersSorted = bubbleSorter(letters);
+        assert.deepEqual(lettersSorted, ['b', 'j', 'm', 'x']);
+    });
+
+    it('works with lowercase words', () => {
         const words = ['james', 'hello', 'zebra', 'another', 'banquet'];
         const wordsSorted = bubbleSorter(words);
         assert.deepEqual(wordsSorted, ['another', 'banquet', 'hello', 'james', 'zebra']);
