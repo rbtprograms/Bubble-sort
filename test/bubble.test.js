@@ -48,7 +48,6 @@ describe('bubble sorting algorithm', () => {
     it('works with negative numbers', () => {
         const negative = [3, 6, -4, 12, 1, -8, -20];
         const negativeSorted = bubbleSorter(negative);
-        console.log(negativeSorted);
         assert.deepEqual(negativeSorted, [-20, -8, -4, 1, 3, 6, 12]);
     });
 
