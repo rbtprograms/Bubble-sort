@@ -39,11 +39,17 @@ describe('bubble sorting algorithm', () => {
         assert.deepEqual(noneSorted, [1, 2, 3, 4, 5, 6]);
     });
     
-    it.only('can sort arrays with large, random numbers', () => {
+    it('can sort arrays with large, random numbers', () => {
         const random = [927, 88837, 23, 9090, 91837, 222, 4567, 111111];
         const randomSorted = bubbleSorter(random);
-        console.log(randomSorted);
         assert.deepEqual(randomSorted, [23, 222, 927, 4567, 9090, 88837, 91837, 111111]);
+    });
+    
+    it('works with negative numbers', () => {
+        const negative = [3, 6, -4, 12, 1, -8, -20];
+        const negativeSorted = bubbleSorter(negative);
+        console.log(negativeSorted);
+        assert.deepEqual(negativeSorted, [-20, -8, -4, 1, 3, 6, 12]);
     });
 
 });
