@@ -27,11 +27,17 @@ describe('bubble sorting algorithm', () => {
         assert.deepEqual(largeSorted, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]);
     });
     
-    it.only('will not break if numbers are even', () => {
-        const same = [4, 6, 9, 1, 2, 5, 2];
+    it('will not break if numbers are even', () => {
+        const same = [4, 2, 9, 1, 2, 5, 2];
         const sameSorted = bubbleSorter(same);
-        console.log(sameSorted);
-        assert.deepEqual(sameSorted, [1, 2, 2, 4, 5, 6, 9]);
+        assert.deepEqual(sameSorted, [1, 2, 2, 2, 4, 5, 9]);
+    });
+    
+    it('leaves array alone when it needs no sorting', () => {
+        const none = [1, 2, 3, 4, 5, 6];
+        const noneSorted = bubbleSorter(none);
+        console.log(noneSorted);
+        assert.deepEqual(noneSorted, [1, 2, 3, 4, 5, 6]);
     });
 
 });
