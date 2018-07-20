@@ -1,5 +1,11 @@
 const assert = require('assert');
 const bubbleSorter = require('../lib/bubble');
+const utils = require('./utils');
+
+var chai = require('chai'),
+    expect = chai.expect; // preference and tested with expect
+
+chai.use(require('chai-sorted'));
 
 describe('bubble sorting algorithm', () => {
     
@@ -57,4 +63,9 @@ describe('bubble sorting algorithm', () => {
         assert.deepEqual(words, ['another', 'banquet', 'hello', 'james', 'zebra']);
     });
 
+    it('works for a big random set', () => {
+        const randomArray = utils.createBigArray(1000);
+        bubbleSorter(randomArray);
+        expect(randomArray).to.be.sorted();
+    });
 });
