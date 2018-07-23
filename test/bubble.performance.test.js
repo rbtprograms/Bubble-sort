@@ -24,7 +24,7 @@ describe('bubble sorting performance tests', () => {
         stopwatch.start();
         bubbleSorter(randNums);
         stopwatch.stop();
-
+        
         console.log('Sorting took ' + stopwatch.elapsedMilliseconds + 'ms');
     });
 
